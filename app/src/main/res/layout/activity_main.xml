@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="이 시간 뉴스"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="	#ADD8E6"
+        >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ImageView_mainImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#50000000"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            >
+             <TextView
+                 android:id="@+id/TextView_mainTitle"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textStyle="bold"
+                 android:textSize="24dp"
+                 android:ellipsize="end"
+                 android:maxLines="1"
+                 android:textColor="#ffffff"
+                 android:text="이 시간 뉴스" />
+
+            <TextView
+                android:id="@+id/TextView_mainName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:text="이 시간 뉴스"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
